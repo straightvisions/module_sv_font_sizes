@@ -35,15 +35,6 @@
 
 			return $theme_json;
 		}
-		protected function register_scripts(): sv_font_sizes {
-			parent::register_scripts();
-
-			foreach($this->get_scripts() as $script){
-				$script->set_inline();
-			}
-
-			return $this;
-		}
 		protected function load_settings(): sv_font_sizes {
 			$this->get_setting( 'font_sizes' )
 				 ->set_title( __( 'Font Sizes', 'sv100' ) )
