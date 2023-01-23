@@ -29,7 +29,7 @@
 				$theme_json['settings']['typography']['fontSizes'][$size['slug']]   = array(
 					'slug'              => $size['slug'],
 					'name'              => $size['name'],
-					'size'              => $size['size']['desktop']
+					'size'              => is_array($size['size']) ? $size['size']['desktop'] : $size['size']
 				);
 			}
 
